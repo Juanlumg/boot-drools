@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS product;
+
+  
+ CREATE TABLE product (
+  id INT NOT NULL AUTO_INCREMENT,
+  tipo VARCHAR(100) NOT NULL,
+  discount INT NULL DEFAULT 0,
+  PRIMARY KEY (id));
+
+ 
