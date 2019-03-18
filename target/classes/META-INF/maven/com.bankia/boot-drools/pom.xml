@@ -16,7 +16,7 @@
     </parent> -->	
 
 	<name>boot-drools</name>
-	<description>Demo project for Spring Boot Drools</description>
+	<description>Project for Spring Boot Drools</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -80,6 +80,14 @@
          </dependency>
 
 	</dependencies>	
+	
+	<repositories>
+      <repository>
+          <id>jboss</id>
+          <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+      </repository>
+  	</repositories>
+  
 	<build>
 		<plugins>
 			<plugin>
