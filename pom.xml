@@ -95,7 +95,10 @@
 				<artifactId>xstream</artifactId>
 				<version>1.4.11.1</version>
 			</dependency>
-
+			<dependency>
+			  <groupId>org.kie.server</groupId>
+			  <artifactId>kie-server-client</artifactId>
+			</dependency>
         <!-- exclude tomcat-jdbc, Spring Boot will use HikariCP automatically  -->
         <dependency>
             <groupId>com.zaxxer</groupId>

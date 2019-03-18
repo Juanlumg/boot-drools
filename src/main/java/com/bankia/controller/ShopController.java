@@ -13,7 +13,7 @@ import com.bankia.model.Product;
 import com.bankia.service.ProductService;
 
 @RestController
-public class JewelleryShopController {
+public class ShopController {
 	
 	@Autowired
 	private final ProductRepository repository;
@@ -21,7 +21,7 @@ public class JewelleryShopController {
 	private final ProductService productService;
 
 	@Autowired
-	public JewelleryShopController(ProductService productService, ProductRepository repository) {
+	public ShopController(ProductService productService, ProductRepository repository) {
 		this.productService = productService;
 		this.repository = repository;
 	}
