@@ -92,3 +92,6 @@ target/classes/META-INF/maven/com.bankia/boot-drools/pom.xml
 .metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1_1.del
 .metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_2.cfs
 .metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_4
+target/classes/META-INF/MANIFEST.MF
+target/classes/META-INF/maven/com.bankia/boot-drools/pom.properties
+target/classes/META-INF/maven/com.bankia/boot-drools/pom.xml
