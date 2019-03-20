@@ -18,8 +18,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-		<kie.version>6.1.0.Final</kie.version>
-		<drools.version>7.18.0.Final</drools.version>
 	</properties>
 
 	<dependencyManagement>
@@ -35,7 +33,7 @@
 				<groupId>org.drools</groupId>
 				<artifactId>drools-bom</artifactId>
 				<type>pom</type>
-				<version>${drools.version}</version>
+				<version>7.18.0.Final</version>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
@@ -53,14 +51,23 @@
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-ci</artifactId>
-			<version>${kie.version}</version>
+			<version>6.1.0.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-compiler</artifactId>
 			<scope>runtime</scope>
-			<version>${drools.version}</version>
-		</dependency>
+			</dependency>
+		<dependency>
+	      <groupId>org.drools</groupId>
+	      <artifactId>named-kiesession</artifactId>
+	      <version>6.0.0</version>
+	    </dependency>
+		<dependency>
+	      <groupId>org.drools</groupId>
+	      <artifactId>drools-core</artifactId>
+	      <scope>provided</scope>
+	    </dependency>
 
 		<!-- Spring data JPA, default tomcat pool, exclude it -->
 		<dependency>
@@ -158,7 +165,6 @@
 			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
 		</repository>
 	</repositories>
-
 	<build>
 		<plugins>
 			<plugin>
