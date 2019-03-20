@@ -10,16 +10,14 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<!-- <parent> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> 
-		<version>1.5.1.RELEASE</version> </parent> -->
-
 	<name>boot-drools</name>
 	<description>Project for Spring Boot Drools</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
 		<kie.version>6.1.0.Final</kie.version>
 		<drools.version>7.18.0.Final</drools.version>
 	</properties>
