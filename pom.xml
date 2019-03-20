@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
@@ -8,12 +9,9 @@
 	<artifactId>boot-drools</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	
-	<!-- <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
-    </parent> -->	
+
+	<!-- <parent> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> 
+		<version>1.5.1.RELEASE</version> </parent> -->
 
 	<name>boot-drools</name>
 	<description>Project for Spring Boot Drools</description>
@@ -36,12 +34,12 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-		        <groupId>org.drools</groupId>
-		        <artifactId>drools-bom</artifactId>
-		        <type>pom</type>
-		        <version>${drools.version}</version>
-		        <scope>import</scope>
-		      </dependency>
+				<groupId>org.drools</groupId>
+				<artifactId>drools-bom</artifactId>
+				<type>pom</type>
+				<version>${drools.version}</version>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -51,9 +49,9 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
-	      <groupId>org.kie</groupId>
-	      <artifactId>kie-api</artifactId>
-	    </dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-ci</artifactId>
@@ -66,60 +64,109 @@
 			<version>${drools.version}</version>
 		</dependency>
 
-        <!-- Spring data JPA, default tomcat pool, exclude it -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.tomcat</groupId>
-                    <artifactId>tomcat-jdbc</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <!-- exclude tomcat-jdbc, Spring Boot will use HikariCP automatically  -->
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-          <!--  <version>2.6.0</version> -->
-            </dependency>
-
-        <!-- For MySQL -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-         	<version>5.1.47</version>
-         </dependency>
-         
-         <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<!-- Spring data JPA, default tomcat pool, exclude it -->
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-web</artifactId>
-		    <version>4.3.11.RELEASE</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.tomcat</groupId>
+					<artifactId>tomcat-jdbc</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		         
+
+		<!-- exclude tomcat-jdbc, Spring Boot will use HikariCP automatically -->
 		<dependency>
-		    <groupId>bsf</groupId>
-		    <artifactId>bsf</artifactId>
-		    <version>2.4.0</version>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<!-- <version>2.6.0</version> -->
+		</dependency>
+
+		<!-- For MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.47</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.3.11.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>bsf</groupId>
+			<artifactId>bsf</artifactId>
+			<version>2.4.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch -->
 		<dependency>
-		    <groupId>org.elasticsearch</groupId>
-		    <artifactId>elasticsearch</artifactId>
-		    <version>5.6.0</version>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>5.6.0</version>
 		</dependency>
-				
-	</dependencies>	
-	
+		<!-- https://mvnrepository.com/artifact/org.apache.bsf/bsf-engines -->
+		<dependency>
+			<groupId>org.apache.bsf</groupId>
+			<artifactId>bsf-engines</artifactId>
+			<version>3.0-beta3</version>
+			<type>pom</type>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>4.9.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-spatial-extras -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-spatial-extras</artifactId>
+			<version>6.3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-websocket -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>5.1.5.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jdt/core -->
+		<dependency>
+			<groupId>org.eclipse.jdt</groupId>
+			<artifactId>core</artifactId>
+			<version>3.3.0-v_771</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-gemfire -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-gemfire</artifactId>
+			<version>2.1.5.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-neo4j -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-neo4j</artifactId>
+			<version>5.1.5.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.derby/derby -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.12.1.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 	<repositories>
-      <repository>
-          <id>jboss</id>
-          <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-      </repository>
-  	</repositories>
-  
+		<repository>
+			<id>jboss</id>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
